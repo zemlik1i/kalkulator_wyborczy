@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator wyborczy</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="card" id="login-card">
+        <h2>Logowanie</h2>
+        <div id="login-form">
+            <label for="username">Nazwa użytkownika:</label>
+            <input type="text" id="username">
+            
+            <label for="password">Hasło:</label>
+            <input type="password" id="password">
+            
+            <div class="button-container">
+                <button id="login-btn">Zaloguj</button>
+                <button id="register-btn">Zarejestruj</button>
+            </div>
+        </div>
+        
+        <div id="user-info">
+            <p>Zalogowano jako: <span id="logged-user"></span></p>
+            <button id="logout-btn">Wyloguj</button>
+        </div>
+    </div>
+    
+    <div id="app-content">
+        <div class="card">
+            <h1>Kalkulator wyborczy</h1>
+        </div>
+        
+        <div class="card">
+            <h2>Rejestracja komitetów</h2>
+            
+            <label for="nazwa-komitetu">Nazwa komitetu:</label>
+            <input type="text" id="nazwa-komitetu">
+            
+            <div class="checkbox-container">
+                <input type="checkbox" id="czy-koalicja">
+                <label for="czy-koalicja" class="inline-label">Czy jest koalicją</label>
+            </div>
+            
+            <label for="glosy">Ilość głosów:</label>
+            <input type="number" id="glosy" min="0">
+            
+            <div class="button-container">
+                <button id="dodaj-komitet">Dodaj kolejny komitet</button>
+                <button id="sprawdz-wyniki">Sprawdź wynik procentowy</button>
+                <button id="wyczysc-dane">Wyczyść dane</button>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Zarejestrowane komitety</h2>
+            <div id="zarejestrowane-komitety"></div>
+        </div>
+        
+        <div class="card">
+            <h2>Liczba mandatów do podziału</h2>
+            <label for="liczba-mandatow">Ilość mandatów:</label>
+            <input type="number" id="liczba-mandatow" min="1" value="460">
+            <button id="przelicz-mandaty">Przelicz mandaty</button>
+        </div>
+        
+        <div class="card">
+            <h2>Wyniki wyborów</h2>
+            <table id="tabela-wynikow">
+                <thead>
+                    <tr>
+                        <th>LP</th>
+                        <th>Nazwa komitetu</th>
+                        <th>Próg wyborczy (%)</th>
+                        <th>Ilość głosów</th>
+                        <th>Wynik procentowy</th>
+                        <th>Mandaty</th>
+                    </tr>
+                </thead>
+                <tbody id="wyniki-tabela">
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="card">
+            <h2>Wizualizacja podziału mandatów</h2>
+            <div id="wykres-mandatow" class="wykres-container"></div>
+        </div>
+        
+        <div class="card">
+            <footer>Copyright by Mateusz Zemlik</footer>
+        </div>
+    </div>
+</body>
+</html>
